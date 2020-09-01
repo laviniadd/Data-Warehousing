@@ -1,0 +1,415 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#"
+     xml:base="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:censimento="http://datiopen.istat.it/odi/ontologia/censimento/"
+     xmlns:untitled-ontology-7="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#contiene -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#contiene">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#haZona"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Zona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Regione"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#haCittà -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#haCittà">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#haRegione"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Regione"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Città"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#haRegione -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#haRegione">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Città"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Regione"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#haScuola -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#haScuola">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#si_trova"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Città"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#haZona -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#haZona">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Regione"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Zona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#hasType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#hasType">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#è_caratteristica"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Tipo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#si_trova -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#si_trova">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Città"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#è_caratteristica -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#è_caratteristica">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Tipo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://datiopen.istat.it/odi/ontologia/censimento/haPopolazioneResidente -->
+
+    <owl:DatatypeProperty rdf:about="http://datiopen.istat.it/odi/ontologia/censimento/haPopolazioneResidente">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Città"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#hasCap -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#hasCap">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#hasId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#hasId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Città"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Regione"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Tipo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Zona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#hasName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Città"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Regione"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Zona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#hasNomeTipo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#hasNomeTipo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Tipo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#hasNumeroClassi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#hasNumeroClassi">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#hasVia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#hasVia">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Città -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Città"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Regione -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Regione"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Tipo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Tipo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Zona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Zona"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://datiopen.istat.it/odi/risorsa/territorio/comuni/Firenze_48017 -->
+
+    <owl:NamedIndividual rdf:about="http://datiopen.istat.it/odi/risorsa/territorio/comuni/Firenze_48017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Città"/>
+        <haRegione rdf:resource="http://datiopen.istat.it/odi/risorsa/territorio/regioni/Toscana"/>
+        <haScuola rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola_LaPira"/>
+        <haScuola rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola_Marconi"/>
+        <censimento:haPopolazioneResidente rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14200</censimento:haPopolazioneResidente>
+        <hasName xml:lang="it">Firenze</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://datiopen.istat.it/odi/risorsa/territorio/comuni/Siena_52032 -->
+
+    <owl:NamedIndividual rdf:about="http://datiopen.istat.it/odi/risorsa/territorio/comuni/Siena_52032">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Città"/>
+        <haRegione rdf:resource="http://datiopen.istat.it/odi/risorsa/territorio/regioni/Toscana"/>
+        <haScuola rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola_Acquacalda"/>
+        <haScuola rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola_Marciano"/>
+        <censimento:haPopolazioneResidente rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2060</censimento:haPopolazioneResidente>
+        <hasName xml:lang="it">Siena</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://datiopen.istat.it/odi/risorsa/territorio/regioni/Toscana -->
+
+    <owl:NamedIndividual rdf:about="http://datiopen.istat.it/odi/risorsa/territorio/regioni/Toscana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Regione"/>
+        <haCittà rdf:resource="http://datiopen.istat.it/odi/risorsa/territorio/comuni/Firenze_48017"/>
+        <haCittà rdf:resource="http://datiopen.istat.it/odi/risorsa/territorio/comuni/Siena_52032"/>
+        <haZona rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Centro"/>
+        <hasName xml:lang="it">Toscana</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Centro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Centro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Zona"/>
+        <contiene rdf:resource="http://datiopen.istat.it/odi/risorsa/territorio/regioni/Toscana"/>
+        <hasName xml:lang="it">Centro</hasName>
+        <rdfs:label xml:lang="it">Centro</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Isole -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Isole">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Zona"/>
+        <hasName xml:lang="it">isole</hasName>
+        <rdfs:label xml:lang="it">Isole</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Nord-est -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Nord-est">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Zona"/>
+        <hasName xml:lang="it">Nord-est</hasName>
+        <rdfs:label xml:lang="it">Nord-est</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Nord-ovest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Nord-ovest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Zona"/>
+        <hasName xml:lang="it">Nord-ovest</hasName>
+        <rdfs:label xml:lang="it">Nord-ovest</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Privata -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Privata">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Tipo"/>
+        <hasNomeTipo xml:lang="it">Privata</hasNomeTipo>
+        <rdfs:label xml:lang="it">Privata</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Pubblica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Pubblica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Tipo"/>
+        <è_caratteristica rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola_LaPira"/>
+        <è_caratteristica rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola_Marconi"/>
+        <hasNomeTipo xml:lang="it">Pubblica</hasNomeTipo>
+        <rdfs:label xml:lang="it">Pubblica</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola_Acquacalda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola_Acquacalda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Pubblica"/>
+        <si_trova rdf:resource="http://datiopen.istat.it/odi/risorsa/territorio/comuni/Siena_52032"/>
+        <hasCap xml:lang="it">53100</hasCap>
+        <hasName xml:lang="it">Acquacalda</hasName>
+        <hasNumeroClassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</hasNumeroClassi>
+        <hasVia xml:lang="it">Via Violante di Baviera</hasVia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola_LaPira -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola_LaPira">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Pubblica"/>
+        <si_trova rdf:resource="http://datiopen.istat.it/odi/risorsa/territorio/comuni/Firenze_48017"/>
+        <hasCap xml:lang="it">50133</hasCap>
+        <hasName xml:lang="it">La Pira</hasName>
+        <hasNumeroClassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasNumeroClassi>
+        <hasVia xml:lang="it">Via dei Bruni, 21/E</hasVia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola_Marciano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola_Marciano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Pubblica"/>
+        <si_trova rdf:resource="http://datiopen.istat.it/odi/risorsa/territorio/comuni/Siena_52032"/>
+        <hasCap xml:lang="it">53100</hasCap>
+        <hasName xml:lang="it">Marciano</hasName>
+        <hasNumeroClassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasNumeroClassi>
+        <hasVia xml:lang="it">Strada di Marciano</hasVia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola_Marconi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola_Marconi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Scuola"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Pubblica"/>
+        <si_trova rdf:resource="http://datiopen.istat.it/odi/risorsa/territorio/comuni/Firenze_48017"/>
+        <hasCap xml:lang="it">50134</hasCap>
+        <hasName xml:lang="it">Marconi</hasName>
+        <hasNumeroClassi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasNumeroClassi>
+        <hasVia xml:lang="it">Via Antonio Zobi</hasVia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Sud -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Sud">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lavinia/ontologies/2019/6/untitled-ontology-7#Zona"/>
+        <hasName xml:lang="it">Sud</hasName>
+        <rdfs:label xml:lang="it">Sud</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
